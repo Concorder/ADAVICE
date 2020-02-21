@@ -387,6 +387,7 @@
         }
         .win_background__content{
             width: 100%;
+            top: 0;
         }
         .team {
             overflow: hidden;

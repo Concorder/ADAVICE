@@ -1,8 +1,5 @@
-  @font-face {
-    font-family: 'Plumb-Black';
-    src: url('./fonts/plumb-black.ttf');
-    font-weight: normal;
-    font-style: normal;
+  html {
+    overflow-y: hidden;
   }
 	.win{
 		height: 100vh;
