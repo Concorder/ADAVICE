@@ -1,5 +1,21 @@
 
-	.file-i {
+	#capt-img {
+        width: 44%;
+        margin-left: 22%;
+        vertical-align: bottom;
+    }
+    #capt-input {
+    width: 29% !important;
+    margin-left: 20px;
+    margin-bottom: 0;
+    font-size: 36px;
+
+    }
+    .capt-box {
+        margin-top: 30px;
+        margin-bottom: 50px;
+    }
+    .file-i {
 		width: 0.1px;
 		height: 0.1px;
 		opacity: 0;
@@ -102,6 +118,7 @@
         padding-bottom: 28px;
     }
     .contact_wrapper span.t1 {
+        vertical-align: top;
         display: inline-block;
         width: 100px;
         font-size: 20px;
@@ -208,6 +225,12 @@
         }
     }
     @media(max-width: 576px){
+        #capt-img {
+            width: 40%;
+            margin-left: 28%;
+        }
+        #capt-input {
+    width: 25% !important;}
         .contact_wrapper::after{
             display: none;
         }    
@@ -219,6 +242,7 @@
         }
         .contanct_title{
             font-size: 50px;
+            white-space: normal;
         }
         .contact_description {
             font-size: 21px;
