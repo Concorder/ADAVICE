@@ -66,16 +66,18 @@
     .additional_info_1 span{
         font-size: 20px;
     }
-    .team-post_link {
-        color: #133f6f;
-        text-transform: uppercase;
-        border: 1px solid #133f6f;
-        border-radius: 25px;
-        padding: 10px 68px 7px 68px;
-        font-size: 35px;
-        margin-right: 85px;
-        transition: all ease .3s;
-    }
+.team-post_link {
+    display: block;
+    color: #133f6f;
+    text-transform: uppercase;
+    border: 1px solid #133f6f;
+    border-radius: 25px;
+    padding: 10px 0px 7px 0px;
+    text-align: center;
+    font-size: 35px;
+    margin-right: 85px;
+    transition: all ease .3s;
+}
     .team-post_link:hover {
         color: #fff;
         text-transform: uppercase;
