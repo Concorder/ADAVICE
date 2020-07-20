@@ -75,7 +75,9 @@
     <form id="contact-form"  method="post" class="wpcf7-form" enctype="multipart/form-data">
         <div class="contanct_title">Contact us</div>
             <div class="contact_description">If you have any questions please contact us</div>
-            <div><span class="t1">Name</span><span><input type="text" name="your-name" value="" size="40"  required="" ></span></div>
+            <div><span class="t1">Name</span><span>
+                <input type="text" name="your-name" value="" size="40"  required="" >
+            </span></div>
     <div><span class="t1">Email</span><span ><input type="email" name="your-email" value="" size="40" aria-required="" aria-invalid="false" required=""></span></div>
     <div><span class="t1">Phone</span><span ><input type="tel" aria-required="" name="phone" value="" size="40" required="" aria-invalid="false" 
         pattern="[0-9]+"></span></div>
@@ -158,6 +160,35 @@
             </div>
         </div>
     </footer>
+    <script>
+        $('#contact-form').on('submit', function (){
+            var formData = {
+                'name'              : $('#name').val(),
+                'email'             : $('#email').val(),
+                'phone'             : $('#phone').val(),
+                'company'           : $('#company').val(),
+                'interested'        : $('#interested').val(),
+                'message'           : $('#message').val(),
+            };
+            $('#form2').prop('disabled', true);
+            window.dataLayer = window.dataLayer || [];
+            window.dataLayer.push({'event': 'send_form_talk_to_us'});
+            $.ajax({
+                type        : 'POST',
+                url         : '/c/contact_form',
+                data        :  formData,
+                encode      :  true,
+                success: function(data){
+                    window.location.replace("./submitted.html");
+                },
+                error: function(XMLHttpRequest, textStatus, errorThrown) {
+                    alert("Something is wrong.");
+                }
+            });
+            return false;
+        });
+
+    </script>
     <script src="./js/validate.js"></script>
     <script src="./js/jquery.js"></script>
     <script src="./js/jquery.js"></script>
