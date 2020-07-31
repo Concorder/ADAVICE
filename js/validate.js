@@ -1,5 +1,5 @@
 $('form').on('submit',function(){
-	document.getElementById('thank-you').style.display = 'block';
+	document.getElementById('popup_content').style.display = 'block';
 });
 
 let closePop = document.getElementById('closePop');

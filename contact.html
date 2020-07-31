@@ -98,7 +98,7 @@
         </div>
     </section>
 
-    <div class="popup">
+    <div class="popup_content">
             <div class="popup_content_email">
                 <div class="close_popup_email"></div>
                 <span class="popup_content_text">YOUR MESSAGE HAS BEEN SUCCESSFULLY SENT.</span>
@@ -157,7 +157,18 @@
             </div>
         </div>
     </footer>
+
+    <script src="./js/jquery.js"></script>
+    <script src="./js/aos.js"></script>
+    <script src="./js/main.js"></script>
+    <script src="./owl-carousel/js/owl.carousel.min.js"></script>
     <script>
+
+    </script>
+    <script>
+        jQuery(document).ready(function($){
+            $('.popup_content').hide();
+
         $('#contact-form').on('submit', function (){
             var formData = {
                 'name'              : $('#name').val(),
@@ -176,26 +187,20 @@
                 encode      :  true,
                 success: function(data){
                     /*window.location.replace("./submitted.html");*/
-                    $('.popup_content').fadeIn(300);
+
+                    $('.popup_content').slideDown(300);
+
                 },
                 error: function(XMLHttpRequest, textStatus, errorThrown) {
+                    $('.popup_content').slideDown(300);
                     alert("Something is wrong.");
+
                 }
             });
             return false;
         });
-
-    </script>
-    <script src="./js/validate.js"></script>
-    <script src="./js/jquery.js"></script>
-    <script src="./js/jquery.js"></script>
-    <script src="./js/aos.js"></script>
-    <script src="./js/main.js"></script>
-    <script src="./owl-carousel/js/owl.carousel.min.js"></script>
-    <script>
-        jQuery(document).ready(function($){
-            $('.popup_content').hide();
         });
+
     </script>
     </body>
     </html>
