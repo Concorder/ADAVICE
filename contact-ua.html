@@ -83,8 +83,7 @@
     <div><span class="t1">Телефон</span><span ><input type="tel" id="phone" aria-required="" name="phone" value="" size="40" required="" aria-invalid="false"
         pattern="[0-9]+"></span></div>
     <div><span class="t1">Повідомлення:</span><span ><textarea id="message" name="your-message" cols="40" rows="10"  required=""></textarea></span></div>
-            <!--CAPTCHA-->
-            <div class="g-recaptcha" data-sitekey="your_site_key"></div>
+
     <div><span class="t1">Резюме</span>
         <label class="file-l" id="browse"  for="file-394">
             Додати файл
@@ -92,7 +91,10 @@
                 <input type="file" name="file-394" size="40" class="wpcf7-form-control wpcf7-file file-i" id="file-394" accept=".jpg,.jpeg,.png,.gif,.pdf,.doc,.docx,.ppt,.pptx,.odt,.avi,.ogg,.m4a,.mov,.mp3,.mp4,.mpg,.wav,.wmv" aria-invalid="false">
             </span>
         </label>
-        <input type="submit" value="надіслати" ><span class="ajax-loader"></span>
+        <input type="submit" value="надіслати" class="g-recaptcha"
+               data-sitekey="6LfxzbkZAAAAABP3mFwsFEGNKCWi4vmrCBO3ljIp"
+               data-callback='onSubmit'
+               data-action='submit'><span class="ajax-loader"></span>
     </div>
     <div class="wpcf7-response-output wpcf7-display-none"></div>
     </form></div>
@@ -108,16 +110,6 @@
                 <span class="form_text">Ми скоро з вами зв'яжемося</span>
             </div>
         </div>
-
-    <!-- <div class="popup_content">
-            <div class="close_popup"></div>
-            <span class="popup_content_text">Get closer to all your career goals.</span>
-            <form name="contacts" method="post" action="">
-                <span class="form_text">Just leave your email address here:</span>
-                <input type="email" class="email" name="email">
-                <input type="submit" class="submit" name="submit" value="Send">
-            </form>
-        </div> -->
 
 
 <footer class="footer">
