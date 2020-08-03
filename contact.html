@@ -86,7 +86,7 @@
     <div><span class="t1">CV</span>
         <label class="file-l" id="browse"  for="file-394">Choose file
             <span >
-                <input onChange="Handlechange();"   type="file" name="file-394" size="40" class="wpcf7-form-control wpcf7-file file-i" id="file-394" accept=".jpg,.jpeg,.png,.gif,.pdf,.doc,.docx,.ppt,.pptx,.odt,.avi,.ogg,.m4a,.mov,.mp3,.mp4,.mpg,.wav,.wmv" aria-invalid="false">
+                <input type="file" name="file-394" size="40" class="wpcf7-form-control wpcf7-file file-i" id="file-394" accept=".jpg,.jpeg,.png,.gif,.pdf,.doc,.docx,.ppt,.pptx,.odt,.avi,.ogg,.m4a,.mov,.mp3,.mp4,.mpg,.wav,.wmv" aria-invalid="false">
             </span>
         </label>
         <input type="submit" value="send" ><span class="ajax-loader"></span>
@@ -162,57 +162,7 @@
     <script src="./js/aos.js"></script>
     <script src="./js/main.js"></script>
     <script src="./owl-carousel/js/owl.carousel.min.js"></script>
-    <script>
-
-    </script>
-    <script>
-        jQuery(document).ready(function($){
-            $('.popup_content').hide();
-
-        $('#contact-form').on('submit', function (){
-            var formData = {
-                'name'              : $('#name').val(),
-                'email'             : $('#email').val(),
-                'phone'             : $('#phone').val(),
-                'message'           : $('#message').val(),
-
-            };
-            $('#contact-form').prop('disabled', true);
-            window.dataLayer = window.dataLayer || [];
-            window.dataLayer.push({'event': 'send_form_talk_to_us'});
-            $.ajax({
-                type        : 'POST',
-                url         : '/c/contact_form',
-                data        :  formData,
-                encode      :  true,
-                success: function(data){
-                    /*window.location.replace("./submitted.html");*/
-
-                    $('.popup_content').slideDown(300);
-
-                },
-                error: function(XMLHttpRequest, textStatus, errorThrown) {
-                    alert("Something is wrong.");
-
-                }
-            });
-            return false;
-        });
-
-        $('.close_popup_email').on('click', function(){
-            $('.popup_content').fadeOut(500);
-        });
-
-
-
-
-        });
-        function Handlechange(){
-            var fileinput = document.getElementById("browse");
-            var textinput = document.getElementById("filename");
-            $('#browse').addClass('chosen');
-
-        }
-    </script>
-    </body>
+    <script src="./js/main.js"></script>
+    <script src="./js/validate.js"></script>
+</body>
     </html>

@@ -83,12 +83,12 @@
     <div><span class="t1">Телефон</span><span ><input type="tel" id="phone" aria-required="" name="phone" value="" size="40" required="" aria-invalid="false"
         pattern="[0-9]+"></span></div>
     <div><span class="t1">Повідомлення:</span><span ><textarea id="message" name="your-message" cols="40" rows="10"  required=""></textarea></span></div>
-    <div class="capt-box">
+    <!--<div class="capt-box">
         <img id="capt-img" src="./images/captcha.jpg" alt="">
         <input id="capt-input" pattern="ccgi5e" required="" type="text"> 
-    </div>
+    </div>-->
     <div><span class="t1">Резюме</span>
-        <label class="file-l" for="file-394">
+        <label class="file-l" id="browse"  for="file-394">
             Додати файл
             <span>
                 <input type="file" name="file-394" size="40" class="wpcf7-form-control wpcf7-file file-i" id="file-394" accept=".jpg,.jpeg,.png,.gif,.pdf,.doc,.docx,.ppt,.pptx,.odt,.avi,.ogg,.m4a,.mov,.mp3,.mp4,.mpg,.wav,.wmv" aria-invalid="false">
@@ -103,7 +103,7 @@
         </div>
     </section>
 
-    <div class="popup">
+    <div class="popup_content">
             <div class="popup_content_email">
                 <div class="close_popup_email"></div>
                 <span class="popup_content_text">Ваше повідомлення успішно надіслано</span>
@@ -165,40 +165,9 @@
     <script src="./js/jquery.js"></script>
     <script src="./js/aos.js"></script>
     <script src="./js/main.js"></script>
+    <script src="./js/validate.js"></script>
     <script src="./owl-carousel/js/owl.carousel.min.js"></script>
-    <script>
-        jQuery(document).ready(function($){
-            $('.popup_content').hide();
-        });
-    </script>
-    <script>
-        $('#contact-form').on('submit', function (){
-            var formData = {
-                'name'              : $('#name').val(),
-                'email'             : $('#email').val(),
-                'phone'             : $('#phone').val(),
-                'message'           : $('#message').val(),
 
-            };
-            $('#contact-form').prop('disabled', true);
-            window.dataLayer = window.dataLayer || [];
-            window.dataLayer.push({'event': 'send_form_talk_to_us'});
-            $.ajax({
-                type        : 'POST',
-                url         : '/c/contact_form',
-                data        :  formData,
-                encode      :  true,
-                success: function(data){
-                    /*window.location.replace("./submitted.html");*/
-                    $('.popup_content').fadeIn(300);
-                },
-                error: function(XMLHttpRequest, textStatus, errorThrown) {
-                    alert("Something is wrong.");
-                }
-            });
-            return false;
-        });
 
-    </script>
     </body>
     </html>
