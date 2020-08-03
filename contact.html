@@ -84,9 +84,9 @@
         <input id="capt-input" pattern="ccgi5e" required="" type="text"> 
     </div>-->
     <div><span class="t1">CV</span>
-        <label class="file-l" for="file-394">Choose file
+        <label class="file-l" id="browse"  for="file-394">Choose file
             <span >
-                <input type="file" name="file-394" size="40" class="wpcf7-form-control wpcf7-file file-i" id="file-394" accept=".jpg,.jpeg,.png,.gif,.pdf,.doc,.docx,.ppt,.pptx,.odt,.avi,.ogg,.m4a,.mov,.mp3,.mp4,.mpg,.wav,.wmv" aria-invalid="false">
+                <input onChange="Handlechange();"   type="file" name="file-394" size="40" class="wpcf7-form-control wpcf7-file file-i" id="file-394" accept=".jpg,.jpeg,.png,.gif,.pdf,.doc,.docx,.ppt,.pptx,.odt,.avi,.ogg,.m4a,.mov,.mp3,.mp4,.mpg,.wav,.wmv" aria-invalid="false">
             </span>
         </label>
         <input type="submit" value="send" ><span class="ajax-loader"></span>
@@ -192,15 +192,27 @@
 
                 },
                 error: function(XMLHttpRequest, textStatus, errorThrown) {
-                    $('.popup_content').slideDown(300);
                     alert("Something is wrong.");
 
                 }
             });
             return false;
         });
+
+        $('.close_popup_email').on('click', function(){
+            $('.popup_content').fadeOut(500);
         });
 
+
+
+
+        });
+        function Handlechange(){
+            var fileinput = document.getElementById("browse");
+            var textinput = document.getElementById("filename");
+            $('#browse').addClass('chosen');
+
+        }
     </script>
     </body>
     </html>

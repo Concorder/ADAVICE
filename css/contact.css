@@ -32,7 +32,22 @@
 		text-transform: uppercase;
 		cursor: pointer;
 		transition: all ease .3s;
+        position: relative;
 	}
+    .file-l.chosen {
+        background: #0082ce;
+    }
+    .file-l.chosen:after {
+        content: '';
+        background: url(../images/file.svg)no-repeat;
+        width: 28px;
+        height: 30px;
+        position: absolute;
+        top: -7px;
+        right: -10px;
+        z-index: 10;
+
+    }
 	.file-l:hover, input[type='submit']:hover {
 		background-color: #fff;
 		color: #133f6f;
@@ -53,8 +68,6 @@
     .popup_content_email{
         width: 80vw;
         min-height: 555px;
-        background-color: #f1ae1a;
-        background-image: url(/wp-content/uploads/2019/05/raketa-1.png);
         position: fixed;
         left: 50%;
         top: 50%;
@@ -63,23 +76,25 @@
         background-position: -170px -70px;
         z-index: 99;
         max-width: 1300px;
+        display: contents;
     }
-    .popup_content_email .close_popup_email{
+    .popup_content_email .close_popup_email {
         cursor: pointer;
-        width: 25px;
-        height: 25px;
-        background-size: 25px 25px;
-        background-image: url(/wp-content/themes/adavice/access/images/close.png);
-        top: 20px; 
+        width: 40px;
+        height: 40px;
+        background-image: url(../images/close.svg);
+        top: 20px;
+        background-size: cover;
         right: 15px;
-        position: absolute; 
-    } 
+        position: absolute;
+    }
     .popup_content_email .popup_content_text{
         color: #133f6f;
         font-size: 45px;
         text-transform: uppercase;
         display: block;
-        padding: 185px 110px 5px 25%;
+        margin-top: 25%;
+
     }
     .popup_content_email .form_text{
         color: white;
