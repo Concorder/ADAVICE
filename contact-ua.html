@@ -4,7 +4,7 @@
 		<meta charset="utf-8" />
 		<meta content="IE=edge" http-equiv="X-UA-Compatible" />
         <meta content="width=device-width, initial-scale=1.0" name="viewport" />
-        <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+
 
         <link rel="stylesheet" href="./css/aos.css">
         <link rel="stylesheet" href="./css/fonts.css">
@@ -15,7 +15,7 @@
 
 
         <link rel="stylesheet" href="./css/contact.css">
-        
+        <script src="https://www.google.com/recaptcha/api.js" async defer></script>
 	</head> 
 	<body>
     <div id="preloader">
@@ -83,7 +83,9 @@
     <div><span class="t1">Телефон</span><span ><input type="tel" id="phone" aria-required="" name="phone" value="" size="40" required="" aria-invalid="false"
         pattern="[0-9]+"></span></div>
     <div><span class="t1">Повідомлення:</span><span ><textarea id="message" name="your-message" cols="40" rows="10"  required=""></textarea></span></div>
-
+            <center>
+            <div class="g-recaptcha" data-sitekey="6LcO0bkZAAAAAD30GdSgY8sz3I5nJuE_YralCut4"></div>
+            </center>
     <div><span class="t1">Резюме</span>
         <label class="file-l" id="browse"  for="file-394">
             Додати файл
@@ -91,10 +93,7 @@
                 <input type="file" name="file-394" size="40" class="wpcf7-form-control wpcf7-file file-i" id="file-394" accept=".jpg,.jpeg,.png,.gif,.pdf,.doc,.docx,.ppt,.pptx,.odt,.avi,.ogg,.m4a,.mov,.mp3,.mp4,.mpg,.wav,.wmv" aria-invalid="false">
             </span>
         </label>
-        <input type="submit" value="надіслати" class="g-recaptcha"
-               data-sitekey="6LfxzbkZAAAAABP3mFwsFEGNKCWi4vmrCBO3ljIp"
-               data-callback='onSubmit'
-               data-action='submit'><span class="ajax-loader"></span>
+        <input type="submit" value="надіслати" ><span class="ajax-loader"></span>
     </div>
     <div class="wpcf7-response-output wpcf7-display-none"></div>
     </form></div>
