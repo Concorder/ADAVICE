@@ -13,7 +13,7 @@
         <link rel="stylesheet" href="./owl-carousel/css/owl.carousel.min.css">
         <link rel="stylesheet" href="./owl-carousel/css/owl.theme.default.min.css">
         <link rel="stylesheet" href="./css/contact.css">
-        
+        <script src="https://www.google.com/recaptcha/api.js" async defer></script>
 	</head> 
 	<body>
     <div id="preloader">
@@ -79,10 +79,8 @@
     <div><span class="t1">Email</span><span ><input type="email" id="email" name="your-email" value="" size="40" aria-required="" aria-invalid="false" required=""></span></div>
     <div><span class="t1">Phone</span><span ><input type="tel" id="phone" aria-required="" name="phone" value="" size="40" required="" aria-invalid="false" pattern="[0-9]+"></span></div>
     <div><span class="t1">Message</span><span ><textarea id="message" name="your-message" cols="40" rows="10"  required=""></textarea></span></div>
-    <!--<div class="capt-box">
-        <img id="capt-img" src="./images/captcha.jpg" alt="">
-        <input id="capt-input" pattern="ccgi5e" required="" type="text"> 
-    </div>-->
+        <!--CAPTCHA-->
+        <div class="g-recaptcha" data-sitekey="your_site_key"></div>
     <div><span class="t1">CV</span>
         <label class="file-l" id="browse"  for="file-394">Choose file
             <span >
