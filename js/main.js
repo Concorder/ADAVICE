@@ -176,7 +176,7 @@ var App = function($) {
      * @return void
      * 
      */
-	let popup = {
+/*	let popup = {
 		init: function($){
             
 			if(window.localStorage.getItem('subscribeAdaviceX') != 'true'){
@@ -206,7 +206,7 @@ var App = function($) {
                 })
             })
 		}
-    }
+    }*/
     
 
     let gallery = {
@@ -245,7 +245,6 @@ var App = function($) {
             carousel.init($);
             ninja.init($);
             menubar.init($);
-            popup.init($);
             gallery.init($);
         }
     }
@@ -268,8 +267,6 @@ jQuery(document).ready(function($) {
         }, interval)
     })
     
-    document.addEventListener( 'wpcf7mailsent', function( event ) {
-        $('.popup').show();
-    }, false );
+
 
 });

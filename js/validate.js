@@ -31,6 +31,7 @@ jQuery(document).ready(function($){
             },
             error: function(XMLHttpRequest, textStatus, errorThrown) {
                 alert("Something is wrong.");
+
             }
         });
         return false;
