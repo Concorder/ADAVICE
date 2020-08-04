@@ -131,7 +131,7 @@ var App = function($) {
      * =========================================================================
      * @let ninja
      * @return void
-     * 
+     *
      */
     let ninja = {
         init: function($){
@@ -267,6 +267,8 @@ jQuery(document).ready(function($) {
         }, interval)
     })
     
-
+    document.addEventListener( 'wpcf7mailsent', function( event ) {
+        $('.popup').show();
+    }, false );
 
 });
