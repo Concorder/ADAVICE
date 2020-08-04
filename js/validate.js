@@ -34,7 +34,7 @@ jQuery(document).ready(function($){
     $('.close_popup_email').on('click', function(){
         $('.popup_content').fadeOut(500);
     });
-    $
+
     $('.file-i').on('change', Handlechange);
     function Handlechange(){
         var fileButton = document.getElementById("browse");
